@@ -1,0 +1,5 @@
+"List multiple users."
+posts(
+    "Filters by name. Accepts SQL LIKE wildcards `%` and `_`."
+    title: String @where(operator: "like")
+): [Post!]! @paginate(defaultCount: 10)
